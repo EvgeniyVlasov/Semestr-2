@@ -3,11 +3,11 @@
 #define _CRT_SECURE_NO_WARNINGS
 #define N 100
 
-//Ñîçäàíèå ñìåæíîé ìàòðèöû
+//Создание смежной матрицы
 int* CreateAdjacentMatrix(int A[N][N], int n)
 {
-	// f - ÷èñëà â ìàòðèöå (0 - âðàãè (íåò ñâÿçè), 1 - äðóçüÿ (ñâÿçü åñòü))
-	// k - êîýôôèöèåíò ñâÿçåé (ïðè ÷¸òíîì N k = N/2; ïðè íå÷¸òíîì N k = 0)
+	// f - числа в матрице (0 - враги (нет связи), 1 - друзья (связь есть))
+	// k - коэффициент связей (при чётном N k = N/2; при нечётном N k = 0)
 	int f, k = 0;
 	for (int i = 0; i < n; i++)
 	{
@@ -53,7 +53,7 @@ int* CreateAdjacentMatrix(int A[N][N], int n)
 	return A;
 }
 
-//Íàõîæäåíèå ïóòåé êíèãè
+//Нахождение путей книги
 int FindingPaths(int A[N][N], int n)
 {
 	int book, B[N];
