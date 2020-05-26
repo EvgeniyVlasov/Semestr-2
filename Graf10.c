@@ -16,14 +16,14 @@ void main()
 	}
 	if (n > 100 || n <= 1)
 	{
-		printf_s("Error\n");
+		printf_s("Wrong number\n");
 		system("pause");
 		exit(0);
 	}
 	// Ñîçäàíèå ñìåæíîé ìàòðèöû
-	Matrix(A, n);
+	CreateAdjacentMatrix(A, n);
 	// Íàõîæäåíèå ïóòåé êíèãè
-	Book(A, n);	
+	FindingPaths(A, n);	
 	system("pause");
 }
 
